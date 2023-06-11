@@ -1,0 +1,116 @@
+.contact {
+  display: grid; 
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.InfoRow {
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
+  align-items: center;
+  grid-template-areas: 'col1 col2';
+}
+
+#contact-right{
+  grid-area: col2; 
+  margin-bottom: 15px;
+padding: 0 15px;
+}
+#contact-left{
+  grid-area: col1;
+  margin-bottom: 15px;
+padding: 0 15px;
+
+}
+form{
+  
+max-width: 540px;
+padding-top: 0;
+padding-bottom: 60px;
+
+}
+input,
+  select{
+    padding: 10px;
+    height: 30px;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 0.3rem;
+    
+  }
+  textarea{
+    padding: 10px;
+    height: 70px; 
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 0.3rem;
+  }
+.error{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: red;
+    font-size: 12px;
+  }
+
+  input:focus {
+    border: 1px solid rgb(0, 208, 255);
+  }
+  h2{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color:black;
+}
+  
+  .contactdesc{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 24px;
+  
+  }
+  #contact-img{
+  margin: 0 0 10px 0;
+  padding-right:0;
+}
+@media screen and (max-width: 768px){
+  .InfoRow{
+    grid-template-areas:
+      'col1'
+      'col2';
+  }
+  .contact{
+  padding: 100px 0;
+  }
+  form{
+    width:30vh;
+  }
+  input,
+  select,textarea{
+    width: 30vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  form{
+    width:30vh;}
+    
+  } 
